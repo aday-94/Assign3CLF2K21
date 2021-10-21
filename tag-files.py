@@ -10,7 +10,7 @@ for file_name in file_names:
     tagged_output: List[str] = tagged_output[0:]
     print("output:\n" + "\n".join(tagged_output))
     with open(file_name + ".csv", 'w', newline='') as csvfile:
-        csvwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        csvwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
         csvwriter.writerow(["Text token", "Base token", "Tree Tagger Tagged POS", "Our Tagged POS"])
         for line in tagged_output:
             non_empty_tks = list(filter(lambda x: len(x) > 0, line.split("\t")))
