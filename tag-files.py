@@ -1,12 +1,13 @@
-import subprocess
 import csv
+import subprocess
 from typing import List
 
 file_names = ['data/part1.txt', 'data/part2.txt', 'data/part3.txt']
 
 for file_name in file_names:
     file_text = " ".join(open(file_name).read().split("\n"))
-    tagged_output: List[str] = subprocess.run('cat ' + file_name + "|" + "tree-tagger-english", stdout=subprocess.PIPE, shell=True).stdout.decode('utf-8').split("\n")
+    tagged_output: List[str] = subprocess.run('cat ' + file_name + "|" + "tree-tagger-english", stdout=subprocess.PIPE,
+                                              shell=True).stdout.decode('utf-8').split("\n")
     tagged_output: List[str] = tagged_output[0:]
     print("output:\n" + "\n".join(tagged_output))
     with open(file_name + ".csv", 'w', newline='') as csvfile:

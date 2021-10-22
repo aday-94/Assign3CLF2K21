@@ -1,0 +1,6 @@
+Total tagged for file data/part1.csv: 855 of 856 total rows
+Agreement: 805 tokens (94.15204678362574%)
+Total tagged for file data/part2.csv: 724 of 725 total rows
+Agreement: 637 tokens (87.98342541436463%)
+Total tagged for file data/part3.csv: 562 of 563 total rows
+Agreement: 537 tokens (95.55160142348754%)
